@@ -21,8 +21,8 @@ then
 	sudo debconf-set-selections <<< 'mysql-server-5.5 mysql-server/root_password_again password password'
 
     # Install packages
-	sudo apt-get update
-	sudo apt-get -y install mysql-server-5.5 php5-mysql apache2 git
+    sudo apt-get update
+    sudo apt-get -y install mysql-server-5.5 php5-mysql apache2 git libapache2-mod-php5
 
     # Add timezones to database
     mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -uroot -ppassword mysql
