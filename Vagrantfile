@@ -30,6 +30,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "forwarded_port", guest: '80', host: HTTP_HOST, auto_correct: AUTO_CORRECT
 
   # Set up a shared folder.
-  config.vm.synced_folder "shared/", "/home/vagrant/shared"
+  config.vm.synced_folder "shared/", "/home/vagrant/shared", :mount_options => ['dmode=777,fmode=777']
 
 end
